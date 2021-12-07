@@ -1,7 +1,7 @@
 PHP Dash Docset Generator
 ============
 
-Generates a [Dash](http://kapeli.com/dash) docset for [PHP](http://php.net/).
+This script generates the latest multi-language [PHP CHM documentation](https://www.php.net/download-docs.php) to [Dash](https://kapeli.com/dash) docset.
 
 Support PHP 8.x, multi-language documents (en/ja/ru/ro/es/tr/fr/de/zh/pt_BR).
 
