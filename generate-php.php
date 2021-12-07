@@ -130,8 +130,7 @@ try {
 
 	// copy database
 	if (
-		!copy("{$c_origd}/Contents/Resources/docSet.dsidx", "{$c_rbase}/docSet.dsidx") ||
-		!copy("{$c_origd}/Contents/Resources/docSet.dsidx", "{$c_rbase}/docSet.dsidx.orig")
+		!copy("{$c_origd}/Contents/Resources/docSet.dsidx", "{$c_rbase}/docSet.dsidx")
 	) {
 		do_exception(__LINE__);
 	}
