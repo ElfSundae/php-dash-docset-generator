@@ -233,7 +233,7 @@ foreach ($res as $row) {
 	if (!$html = file_get_contents("{$c_dbase}/{$row['path']}")) {
 		continue;
 	}
-	@$dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'SJIS-win'));
+	@$dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'GB2312,SJIS-win'));
 
 	if (!$t = $dom->getElementsByTagName('title')->item(0)) {
 		continue;
