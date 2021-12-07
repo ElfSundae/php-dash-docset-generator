@@ -182,7 +182,7 @@ file_put_contents("{$c_cbase}/Info.plist", <<<ENDE
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>phpdoc-{$cfg_lang}</string>
+	<string>php-{$cfg_lang}</string>
 	<key>CFBundleName</key>
 	<string>PHP-{$cfg_lang}</string>
 	<key>DocSetPlatformFamily</key>
