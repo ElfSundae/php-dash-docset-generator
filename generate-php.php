@@ -15,7 +15,7 @@ http://opensource.org/licenses/mit-license.php
 
 // set your language (en/ja/ru/ro/es/tr/fr/de/zh/pt_BR)
 $cfg_lang = 'zh';
-$cfg_ver  = '8.0';
+$cfg_ver  = '8.x';
 
 // set your chm-extract command
 // ** must be 'sprintf() format'
