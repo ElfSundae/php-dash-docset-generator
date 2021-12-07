@@ -184,7 +184,7 @@ file_put_contents("{$c_cbase}/Info.plist", <<<ENDE
 	<key>CFBundleIdentifier</key>
 	<string>phpdoc-{$cfg_lang}</string>
 	<key>CFBundleName</key>
-	<string>PHP {$cfg_ver}-{$cfg_lang}</string>
+	<string>PHP-{$cfg_lang}</string>
 	<key>DocSetPlatformFamily</key>
 	<string>php</string>
 	<key>dashIndexFilePath</key>
