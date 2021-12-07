@@ -1,5 +1,4 @@
-PHP.docset/Contents/Resources
-PHP.docset/Contents/Info.plist
+PHP.docset/Contents
 PHP.docset.zip
 Thumbs.db
 desktop.ini
@@ -7,3 +6,7 @@ desktop.ini
 .buildpath
 .project
 .settings
+
+/PHP.tgz
+/php_enhanced_*.chm
+/en_orig_docset
