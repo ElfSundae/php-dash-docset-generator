@@ -48,7 +48,7 @@ $c_guide = 'Guide';
 // @link https://github.com/Kapeli/feeds/blob/master/PHP.xml
 // ** select download url from above xml.
 //
-$c_url_doc = 'http://tokyo.kapeli.com/feeds/PHP.tgz';
+$c_url_doc = 'https://kapeli.com/feeds/PHP.tgz';
 //
 // PHP manual URL
 // @link http://php.net/download-docs.php
