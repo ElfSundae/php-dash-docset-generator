@@ -174,7 +174,8 @@ try {
     }
 
     // copy & replace documents
-    if (!rename("{$c_origd}/Contents/Resources/Documents/php.net", "{$c_dbase}/php.net")) {
+    if (file_exists("{$c_origd}/Contents/Resources/Documents/php.net") &&
+        !rename("{$c_origd}/Contents/Resources/Documents/php.net", "{$c_dbase}/php.net")) {
 		do_exception(__LINE__);
 	}
     if (!rename("{$c_origd}/Contents/Resources/Documents/www.php.net", "{$c_dbase}/www.php.net")) {
@@ -261,7 +262,7 @@ $dom = new DomDocument();
 $list = [];
 
 foreach ($res as $row) {
-    if (!$html = file_get_contents("{$c_dbase}/{$row['path']}")) {
+    if (!$html = @file_get_contents("{$c_dbase}/{$row['path']}")) {
         continue;
     }
     @$dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'GB2312,SJIS-win'));
