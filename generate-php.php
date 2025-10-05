@@ -221,7 +221,7 @@ file_put_contents("{$c_cbase}/Info.plist", <<<ENDE
 	<key>dashIndexFilePath</key>
 	<string>www.php.net/manual/en/index.html</string>
 	<key>DashDocSetFamily</key>
-	<string>dashtoc</string>
+	<string>unsorteddashtoc</string>
 	<key>isDashDocset</key>
 	<true/>
 </dict>
@@ -280,11 +280,16 @@ foreach ($list as $val) {
     $stmt->execute($val);
 }
 
+// Output destination docset and tgz file
+$dest_docset = __DIR__ . "/PHP.docset";
 if ($cfg_lang !== 'en') {
     $dest_docset = __DIR__ . "/PHP-{$cfg_lang}.docset";
     remove_dir($dest_docset);
     rename(__DIR__ . '/PHP.docset', $dest_docset);
 }
+$dest_tgz = substr_replace($dest_docset, '.tgz', -strlen('.docset'));
+@unlink($dest_tgz);
+exec_ex("tar --exclude='.DS_Store' -czf '{$dest_tgz}' '{$dest_docset}'");
 
 echo "\nPHP {$cfg_ver} docset updated !\n\n";
 
