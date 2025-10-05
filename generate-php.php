@@ -280,6 +280,12 @@ foreach ($list as $val) {
     $stmt->execute($val);
 }
 
+if ($cfg_lang !== 'en') {
+    $dest_docset = __DIR__ . "/PHP-{$cfg_lang}.docset";
+    remove_dir($dest_docset);
+    rename(__DIR__ . '/PHP.docset', $dest_docset);
+}
+
 echo "\nPHP {$cfg_ver} docset updated !\n\n";
 
 
