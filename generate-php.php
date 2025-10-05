@@ -101,7 +101,7 @@ try {
     }
 
     exec_ex("wget {$c_url_doc}");
-    exec_ex("wget --trust-server-names {$c_url_chm}");
+    exec_ex("wget -O {$target_chm} {$c_url_chm}");
 
     echo "\nReplace docset files for your language ...\n\n";
 
