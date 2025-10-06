@@ -289,7 +289,7 @@ if ($cfg_lang !== 'en') {
 }
 $dest_tgz = substr_replace($dest_docset, '.tgz', -strlen('.docset'));
 @unlink($dest_tgz);
-exec_ex("tar --exclude='.DS_Store' -czf '{$dest_tgz}' '{$dest_docset}'");
+exec_ex("tar --exclude='.DS_Store' -czf '{$dest_tgz}' -C '{$dest_docset}/..' '" . basename($dest_docset) . "'");
 
 echo "\nPHP {$cfg_ver} docset updated !\n\n";
 
