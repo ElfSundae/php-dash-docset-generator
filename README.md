@@ -1,3 +1,7 @@
+> ⚠️ **This project has been deprecated.**
+> 🚀 **Please use the new, more powerful one instead:**
+> 👉 <https://github.com/ElfSundae/dash-php>
+---
 PHP Dash Docset Generator
 ============
 
